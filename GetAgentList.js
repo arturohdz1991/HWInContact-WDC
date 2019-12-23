@@ -3,17 +3,17 @@
     var tableData = []
     var accessData = new Object()
     //Access data for HWC
-    accessData[0] = {'cluster':"HON",'email':"Kowsalya.Natarajan@HON.com",'password':"Nttd@t@127",'applicationID':"Alteryx@HON.com:4597891"}
+    accessData[0] = {'cluster':"HON",'email':"API_READONLY@HON.com",'password':"aP1_2020",'applicationID':"Alteryx@HON.com:4597891"}
     //Access data for PMT
     accessData[1] = {'cluster':"PMT",'email':"Kowsalya.Natarajan@pmt.com",'password':"Nttd@t@127",'applicationID':"Alteryx@PMT.com:4597432"}
     //Access data for HBT
-    accessData[2] = {'cluster':"HBT",'email':"Kowsalya.Natarajan@hbt.com",'password':"Nttd@t@127",'applicationID':"Alteryx@HBT.com:4597435"}
+    accessData[2] = {'cluster':"HBT",'email':"API_READONLY@HBT.com",'password':"aP1_2020",'applicationID':"Alteryx@HBT.com:4597435"}
     //Access data for SPS
-    accessData[3] = {'cluster':"SPS",'email':"Kowsalya.Natarajan@sps.com",'password':"Nttd@t@127",'applicationID':"Alteryx@SPS.com:4597431"}
+    accessData[3] = {'cluster':"SPS",'email':"API_READONLY@SPS.com",'password':"aP1_2020",'applicationID':"Alteryx@SPS.com:4597431"}
     //Access data for AERO
-    accessData[4] = {'cluster':"AERO",'email':"Kowsalya.Natarajan@aero.com",'password':"Nttd@t@128",'applicationID':"Alteryx@AERO.com:4597433"}
+    accessData[4] = {'cluster':"AERO",'email':"API_READONLY@AERO.com",'password':"aP1_2020",'applicationID':"Alteryx@AERO.com:4597433"}
     //Access data for SPSEM
-    accessData[5] = {'cluster':"SPSEM",'email':"Kowsalya.Natarajan@em.com",'password':"Nttd@t@127",'applicationID':"Alteryx@EM.com:4597927"}
+    accessData[5] = {'cluster':"SPSEM",'email':"API_READONLY@SPSEM.com",'password':"aP1_2020",'applicationID':"Alteryx@EM.com:4597927"}
     //Access data for HRCC
     accessData[6] = {'cluster':"HRCC",'email':"API_READONLY@HRCC.com",'password':"aP1_2020",'applicationID':"Admin@HRCC.com:4599199"}
 
