@@ -74,7 +74,7 @@
     }
     //Function to request data
     function dataRequest(cluster, accessToken){
-        if (cluster == "HWC"|cluster == "PMT"){
+        if (cluster == "HON"|cluster == "PMT"){
             reportId = 1073742382;
         } else if(cluster == "HBT"|cluster == "SPS"){
             reportId = 1074092264;
