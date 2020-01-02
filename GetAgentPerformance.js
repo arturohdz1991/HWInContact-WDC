@@ -26,7 +26,7 @@
             {id: "Cluster",dataType: tableau.dataTypeEnum.string},
             {id: "agentId",alias:"User ID",dataType: tableau.dataTypeEnum.int},
             {id: "teamId",dataType: tableau.dataTypeEnum.int},
-            {id: "totalHandled",dataType: tableau.dataTypeEnum.string}
+            {id: "totalHandled",dataType: tableau.dataTypeEnum.int}
             
         ];
 
@@ -68,7 +68,7 @@
     //Function to request data
     function dataRequest(cluster, accessToken){
 		today = new Date ()
-		startDate = new Date(today.setDate(-90))
+		startDate = new Date(today.setDate(-30))
         endDate = today
 
         requestBody = {
