@@ -86,11 +86,11 @@
             'data':requestBody,
             'success': function (result,status,statusCode){
                 //document.getElementById("result").innerHTML = Array.isArray(result.agents)
-                performList = result.agentPerformnace
-                for (record in agentList){
+                performList = result.agentPerformance
+                for (record in performList){
                     rowData = []
                     rowData.push(cluster)
-                    agentDetails = agentList[record]
+                    agentDetails = performList[record]
                     for (dataPoint in agentDetails){
                         rowData.push(agentDetails[dataPoint])
                     }
