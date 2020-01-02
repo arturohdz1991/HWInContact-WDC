@@ -18,7 +18,10 @@
     accessData[6] = {'cluster':"HRCC",'email':"API_READONLY@HRCC.com",'password':"aP1_2020",'applicationID':"Admin@HRCC.com:4599199"}
     //Access data for DSES
     accessData[7] = {'cluster':"DSES",'email':"Arturo.Hernandez2@DSES.com",'password':"Nov12345!",'applicationID':"Admin@DSES.com:4599200"}
-    // Create the connector object
+	//Variable to store how many Requests are left to do
+	ajaxCallsRemaining = Object.keys(accessData).length
+	console.log(ajaxCallsRemaining+" Requests")
+	// Create the connector object
     var myConnector = tableau.makeConnector();
     // Define the schema
     myConnector.getSchema = function(schemaCallback) {
@@ -46,7 +49,7 @@
         schemaCallback([tableSchema]);
     };
     //Function to request Access token
-    function getToken(accessVariable,callback){
+    function getToken(accessVariable,callback,table,doneCallBack){
         requestBody = {
             "grant_type" : "password",
             "username" : accessVariable.email,
@@ -65,7 +68,7 @@
                 //document.getElementById("result").innerHTML += "<br>1:" + JSON.stringify(result);
                 //accessToken = result
                 console.log(accessVariable.cluster + " Token:" + status);
-                callback(accessVariable.cluster,result);
+                callback(accessVariable.cluster,result,table,doneCallBack);
             },
             'error': function(XMLHttpRequest, textStatus, errorThrown){
                 //document.getElementById("result").innerHTML += "<br>1:" + JSON.stringify(errorThrown);
@@ -74,7 +77,7 @@
         });
     }
     //Function to request data
-    function dataRequest(cluster, accessToken){
+    function dataRequest(cluster, accessToken,table,doneCallBack){
         if (cluster == "HON"|cluster == "PMT"){
             reportId = 1073742382;
         } else if(cluster == "HBT"|cluster == "SPS"){
@@ -102,7 +105,6 @@
             },
             'data':requestBody,
             'success': function (result,status,statusCode){
-                //document.getElementById("result").innerHTML = Array.isArray(result.agents)
                 console.log(cluster + " Result:" + status);
                 csvResult = atob(result.file)
                 //csvResult.replace(/(\r\n|\n|\r)/gm,";")
@@ -116,9 +118,16 @@
                         //console.log(agentDetails[dataPoint])
                         rowData.push(agentDetails[dataPoint])
                     }
-                    tableData.push(rowData)
-                }
-                //document.getElementById("result").innerHTML += "<br>2:" + tableData
+					tableData.push(rowData)
+				}
+				console.log(cluster+" Query Success")
+				--ajaxCallsRemaining
+				console.log(ajaxCallsRemaining+" Call Remain")
+				if (ajaxCallsRemaining==0) {
+					console.log("Execute Callback")
+					table.appendRows(tableData)
+					doneCallBack();
+				}
             },
             'error': function(XMLHttpRequest, textStatus, errorThrown){
                 console.log(cluster + " Result:" + textStatus);
@@ -129,13 +138,8 @@
     // Download the data
     myConnector.getData = function(table, doneCallback) {
         for (acObj in accessData){
-                getToken(accessData[acObj],dataRequest);
+                getToken(accessData[acObj],dataRequest,table, doneCallback);
             }
-        //alert(tableData)
-        setTimeout(function(){
-            table.appendRows(tableData)
-            doneCallback();
-        }, 60000);
     };
 
     tableau.registerConnector(myConnector);
