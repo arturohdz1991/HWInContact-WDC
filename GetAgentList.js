@@ -67,6 +67,7 @@
                 'Content-Type':'application/x-www-form-urlencoded'
             },
             'data':requestBody,
+            'timeout': 3*60*1000, //5 min timeout
             'success': function(result,status,statusCode){
                 callback(accessVariable.cluster,result,table,doneCallBack);
             },
