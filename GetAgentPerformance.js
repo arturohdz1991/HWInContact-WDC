@@ -17,7 +17,10 @@
     //Access data for HRCC
     accessData[6] = {'cluster':"HRCC",'email':"API_READONLY@HRCC.com",'password':"aP1_2020",'applicationID':"Admin@HRCC.com:4599199"}
     //Access data for DSES
-    accessData[7] = {'cluster':"DSES",'email':"Arturo.Hernandez2@DSES.com",'password':"Nov12345!",'applicationID':"Admin@DSES.com:4599200"}
+	accessData[7] = {'cluster':"DSES",'email':"Arturo.Hernandez2@DSES.com",'password':"Nov12345!",'applicationID':"Admin@DSES.com:4599200"}
+	//Variable to store how many Requests are left to do
+	ajaxCallsRemaining = Object.keys(accessData).length
+	console.log(ajaxCallsRemaining+" Requests")
     // Create the connector object
     var myConnector = tableau.makeConnector();
     // Define the schema
@@ -27,19 +30,16 @@
             {id: "agentId",alias:"User ID",dataType: tableau.dataTypeEnum.int},
             {id: "teamId",dataType: tableau.dataTypeEnum.int},
             {id: "totalHandled",dataType: tableau.dataTypeEnum.int}
-            
         ];
-
         var tableSchema = {
             id: "agentPerformance",
             alias: "Agent Performance",
             columns: cols
         };
-
         schemaCallback([tableSchema]);
     };
     //Function to request Access token
-    function getToken(accessVariable,callback){
+    function getToken(accessVariable,callback,table,doneCallback){
         requestBody = {
             "grant_type" : "password",
             "username" : accessVariable.email,
@@ -53,29 +53,27 @@
                 'Authorization':'basic ' + btoa(accessVariable.applicationID),
                 'Content-Type':'application/x-www-form-urlencoded'
             },
-            'data':requestBody,
+			'data':requestBody,
+			'timeout': 5*60*1000, //5 min timeout
             'success': function(result,status,statusCode){
-                //document.getElementById("result").innerHTML += "<br>1:" + JSON.stringify(result);
-                //accessToken = result
-                callback(accessVariable.cluster,result);
+                callback(accessVariable.cluster,result,table,doneCallback);
             },
             'error': function(XMLHttpRequest, textStatus, errorThrown){
-                //document.getElementById("result").innerHTML += "<br>1:" + JSON.stringify(errorThrown);
                 callback(null);
-            }
+			}
         });
     }
     //Function to request data
-    function dataRequest(cluster, accessToken){
+    function dataRequest(cluster,accessToken,table,donecallback){
 		today = new Date()
 		endDate = new Date(today.getFullYear(),today.getMonth(),today.getDate())
 		last30 = new Date(today.setDate(-28))
 		startDate = new Date(last30.getFullYear(),last30.getMonth(),last30.getDate())
-        requestBody = {
-            'startDate': startDate.toISOString(),
+		requestBody = {
+			'startDate': startDate.toISOString(),
 			'endDate': endDate.toISOString(),
 			'fields': 'agentId,totalHandled'
-        }
+		}
         $.ajax({
             'url':accessToken.resource_server_base_uri + "services/v16.0/agents/performance",
             'type':'GET',
@@ -83,9 +81,9 @@
                 'Authorization':'bearer '+ accessToken.access_token,
                 'Content-Type':'application/x-www-form-urlencoded'
             },
-            'data':requestBody,
+			'data':requestBody,
+			'timeout': 5*60*1000, //5 min timeout
             'success': function (result,status,statusCode){
-                //document.getElementById("result").innerHTML = Array.isArray(result.agents)
                 performList = result.agentPerformance
                 for (record in performList){
                     rowData = []
@@ -96,10 +94,17 @@
                     }
                     tableData.push(rowData)
                 }
-                //document.getElementById("result").innerHTML += "<br>2:" + tableData
+				console.log(cluster+" Query Success")
+				--ajaxCallsRemaining
+				console.log(ajaxCallsRemaining+" Call Remain")
+				if (ajaxCallsRemaining==0) {
+					console.log("Execute Callback")
+					table.appendRows(tableData)
+					donecallback();
+				}
             },
             'error': function(XMLHttpRequest, textStatus, errorThrown){
-                //document.getElementById("result").innerHTML = "<br>2:" +JSON.stringify(textStatus);
+                console.log(cluster+" Error")
             }
         });
     }
@@ -107,13 +112,8 @@
     // Download the data
     myConnector.getData = function(table, doneCallback) {
         for (acObj in accessData){
-                getToken(accessData[acObj],dataRequest);
+                getToken(accessData[acObj],dataRequest,table,doneCallback);
             }
-        //alert(tableData)
-        setTimeout(function(){
-            table.appendRows(tableData)
-            doneCallback();
-        }, 100000);
     };
 
     tableau.registerConnector(myConnector);
