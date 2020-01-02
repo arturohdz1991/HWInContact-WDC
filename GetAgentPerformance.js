@@ -113,7 +113,7 @@
         setTimeout(function(){
             table.appendRows(tableData)
             doneCallback();
-        }, 10000);
+        }, 60000);
     };
 
     tableau.registerConnector(myConnector);
