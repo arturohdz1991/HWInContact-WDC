@@ -67,12 +67,12 @@
     }
     //Function to request data
     function dataRequest(cluster, accessToken){
-		today = new Date ()
-		startDate = new Date(today.setDate(-10))
-        endDate = today
-
+		today = new Date()
+		endDate = new Date(today.getFullYear(),today.getMonth(),today.getDate())
+		last30 = new Date(today.setDate(-28))
+		startDate = new Date(last30.getFullYear(),last30.getMonth(),last30.getDate())
         requestBody = {
-            'startDate':startDate.toISOString(),
+            'startDate': startDate.toISOString(),
 			'endDate': endDate.toISOString(),
 			'fields': 'agentId,totalHandled'
         }
@@ -99,7 +99,7 @@
                 //document.getElementById("result").innerHTML += "<br>2:" + tableData
             },
             'error': function(XMLHttpRequest, textStatus, errorThrown){
-                document.getElementById("result").innerHTML = "<br>2:" +JSON.stringify(textStatus);
+                //document.getElementById("result").innerHTML = "<br>2:" +JSON.stringify(textStatus);
             }
         });
     }
