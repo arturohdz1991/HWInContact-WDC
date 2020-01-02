@@ -68,7 +68,7 @@
     //Function to request data
     function dataRequest(cluster, accessToken){
 		today = new Date ()
-		startDate = new Date(today.setDate(-30))
+		startDate = new Date(today.setDate(-10))
         endDate = today
 
         requestBody = {
