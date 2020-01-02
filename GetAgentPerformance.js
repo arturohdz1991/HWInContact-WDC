@@ -72,8 +72,8 @@
         endDate = today
 
         requestBody = {
-            'startDate':startDate.toIsoString(),
-			'endDate': endDate.toIsoString(),
+            'startDate':startDate.toISOString(),
+			'endDate': endDate.toISOString(),
 			'fields': 'agentId,totalHandled'
         }
         $.ajax({
