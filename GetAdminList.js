@@ -63,7 +63,8 @@
                 'Authorization':'basic ' + btoa(accessVariable.applicationID),
                 'Content-Type':'application/x-www-form-urlencoded'
             },
-            'data':requestBody,
+			'data':requestBody,
+			'timeout': 1*60*1000, //1 min timeout
             'success': function(result,status,statusCode){
                 //document.getElementById("result").innerHTML += "<br>1:" + JSON.stringify(result);
                 //accessToken = result
