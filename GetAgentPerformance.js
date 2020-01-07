@@ -67,7 +67,7 @@
     function dataRequest(cluster,accessToken,table,donecallback){
 		today = new Date()
 		endDate = new Date(today.getFullYear(),today.getMonth(),today.getDate())
-		last30 = new Date(today.setDate(-28))
+		last30 = new Date(today.setDate(endDate.getDate()-28))
 		startDate = new Date(last30.getFullYear(),last30.getMonth(),last30.getDate())
 		requestBody = {
 			'startDate': startDate.toISOString(),
