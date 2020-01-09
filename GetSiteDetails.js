@@ -34,12 +34,12 @@
                 csvResult = result
                 csvRows=csvResult.split(/\n/)
                 for (csvRow=1;csvRow<csvRows.length;csvRow++){
-                    console.log(csvRows[csvRow])
+                    //console.log(csvRows[csvRow])
                     rowData = []
                     siteDetails = csvRows[csvRow].split(",")
                     for (dataPoint=0;dataPoint<siteDetails.length;dataPoint++){
 						if(siteDetails[dataPoint].length<1){break;}
-						console.log(siteDetails[dataPoint])
+						//console.log(siteDetails[dataPoint])
                         rowData.push(siteDetails[dataPoint])
                     }
 					tableData.push(rowData)
