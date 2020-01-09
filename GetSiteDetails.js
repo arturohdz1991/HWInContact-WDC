@@ -43,7 +43,7 @@
                         rowData.push(siteDetails[dataPoint])
                     }
 					tableData.push(rowData)
-					if (csvRow==3){break;}
+					//if (csvRow==3){break;}
 				}
 				table.appendRows(tableData)
 				doneCallBack();
