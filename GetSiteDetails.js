@@ -31,7 +31,7 @@
 			"dataType":"text",
             'timeout': 5*60*1000, //5 min timeout
             'success': function (result,status,statusCode){
-                csvResult = result
+                csvResult = result.replace(/['"]+/g, '')
                 csvRows=csvResult.split(/\n/)
                 for (csvRow=1;csvRow<csvRows.length;csvRow++){
                     //console.log(csvRows[csvRow])
