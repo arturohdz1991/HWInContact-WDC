@@ -11,8 +11,8 @@
             {id: "siteState",alias:"State",dataType: tableau.dataTypeEnum.string},
             {id: "siteCountry",alias:"Country",dataType: tableau.dataTypeEnum.string},
             {id: "siteRegion",alias:"Region",dataType: tableau.dataTypeEnum.string},
-            {id: "lat",dataType: tableau.dataTypeEnum.int},
-            {id: "long",dataType: tableau.dataTypeEnum.int}
+            {id: "lat",dataType: tableau.dataTypeEnum.float},
+            {id: "long",dataType: tableau.dataTypeEnum.float}
         ];
 
         var tableSchema = {
