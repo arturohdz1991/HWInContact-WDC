@@ -1,28 +1,28 @@
 (function() {
     //Declare Global Variables
     var tableData = []
-    var accessData = new Object()
-    //Access data for HWC
-    accessData[0] = {'cluster':"HON",'email':"API_READONLY@HON.com",'password':"aP1_2020",'applicationID':"Alteryx@HON.com:4597891"}
-    //Access data for PMT
-    accessData[1] = {'cluster':"PMT",'email':"Kowsalya.Natarajan@pmt.com",'password':"Nttd@t@127",'applicationID':"Alteryx@PMT.com:4597432"}
-    //Access data for HBT
-    accessData[2] = {'cluster':"HBT",'email':"API_READONLY@HBT.com",'password':"aP1_2020",'applicationID':"Alteryx@HBT.com:4597435"}
-    //Access data for SPS
-    accessData[3] = {'cluster':"SPS",'email':"API_READONLY@SPS.com",'password':"aP1_2020",'applicationID':"Alteryx@SPS.com:4597431"}
-    //Access data for AERO
-    accessData[4] = {'cluster':"AERO",'email':"API_READONLY@AERO.com",'password':"aP1_2020",'applicationID':"Alteryx@AERO.com:4597433"}
-    //Access data for SPSEM
-    accessData[5] = {'cluster':"SPSEM",'email':"API_READONLY@SPSEM.com",'password':"aP1_2020",'applicationID':"Alteryx@EM.com:4597927"}
-    //Access data for HRCC
-    accessData[6] = {'cluster':"HRCC",'email':"API_READONLY@HRCC.com",'password':"aP1_2020",'applicationID':"Admin@HRCC.com:4599199"}
-    //Access data for DSES
-    accessData[7] = {'cluster':"DSES",'email':"Arturo.Hernandez2@DSES.com",'password':"Nov12345!",'applicationID':"Admin@DSES.com:4599200"}
-	//Variable to store how many Requests are left to do
-	ajaxCallsRemaining = Object.keys(accessData).length
-	console.log(ajaxCallsRemaining+" Requests")
+	var ajaxCallsRemaining = 0
+	var accessData = new Object()
+	getAccessData()
 	// Create the connector object
-    var myConnector = tableau.makeConnector();
+	var myConnector = tableau.makeConnector();
+	//Get Access Data
+	function getAccessData(){
+		$.ajax({
+            'url':'./accessData.json',
+            'type':'GET',
+			"dataType":"json",
+			'success': function(result,status,statusCode){
+            	ajaxCallsRemaining = Object.keys(result).length
+				console.log(ajaxCallsRemaining+" Requests")
+                accessData=result;
+            },
+            'error': function(XMLHttpRequest, textStatus, errorThrown){
+                console.log(accessVariable.cluster + " Token:" + textStatus);
+				return null;
+            }
+        });
+	}
     // Define the schema
     myConnector.getSchema = function(schemaCallback) {
         var cols = [
