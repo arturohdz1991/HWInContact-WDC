@@ -3,11 +3,10 @@
     var tableData = []
 	var ajaxCallsRemaining = 0
 	var accessData = new Object()
-	getAccessData()
 	// Create the connector object
 	var myConnector = tableau.makeConnector();
 	//Get Access Data
-	function getAccessData(){
+	function getAccessData(table,doneCallback){
 		$.ajax({
             'url':'./accessData.json',
             'type':'GET',
@@ -15,7 +14,10 @@
 			'success': function(result,status,statusCode){
             	ajaxCallsRemaining = Object.keys(result).length
 				console.log(ajaxCallsRemaining+" Requests")
-                accessData=result;
+				accessData=result
+				for (acObj in accessData){
+					getToken(accessData[acObj],dataRequest,table,doneCallback);
+				}
             },
             'error': function(XMLHttpRequest, textStatus, errorThrown){
                 console.log(accessVariable.cluster + " Token:" + textStatus);
@@ -124,9 +126,7 @@
 
     // Download the data
     myConnector.getData = function(table, doneCallback) {
-        for (acObj in accessData){
-			getToken(accessData[acObj],dataRequest,table,doneCallback);
-            }
+		getAccessData(table,doneCallback)
     };
 
     tableau.registerConnector(myConnector);
