@@ -36,6 +36,7 @@
             {id: "isActive",dataType: tableau.dataTypeEnum.bool},
             {id: "teamId",dataType: tableau.dataTypeEnum.int},
 			{id: "teamName",dataType: tableau.dataTypeEnum.string},
+			{id: "reportToId",alias:"Supervisor ID",dataType: tableau.dataTypeEnum.int},
 			{id: "location",alias:"NIC Site",dataType: tableau.dataTypeEnum.string},
             {id: "internalId",alias:"NIC EID",dataType: tableau.dataTypeEnum.string},
             {id: "profileId",dataType: tableau.dataTypeEnum.int},
@@ -84,7 +85,7 @@
             'updatedSince': '',
             'isActive': '',
             'searchString': '',
-            'fields': 'agentId,firstName,lastName,emailAddress,isActive,teamId,teamName,isBillable,location,profileId,profileName,createDate,inactiveDate,internalId',
+            'fields': 'agentId,firstName,lastName,emailAddress,isActive,teamId,teamName,reportToId,location,profileId,profileName,createDate,inactiveDate,internalId,isBillable',
             'skip': '',
             'top': '',
             'orderBy': ''
