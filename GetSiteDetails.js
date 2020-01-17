@@ -29,14 +29,14 @@
 			"dataType":"text",
             'timeout': 5*60*1000, //5 min timeout
             'success': function (result,status,statusCode){
-                csvResult = result.replace(/['"]+/g, '')
+                csvResult = result.replace(/['"]+/g,'')
                 csvRows=csvResult.split(/\n/)
                 for (csvRow=1;csvRow<csvRows.length;csvRow++){
                     //console.log(csvRows[csvRow])
                     rowData = []
                     siteDetails = csvRows[csvRow].split(",")
                     for (dataPoint=0;dataPoint<siteDetails.length;dataPoint++){
-						if(siteDetails[dataPoint].length<1){break;}
+						//if(siteDetails[dataPoint].length<1){break;}
 						//console.log(siteDetails[dataPoint])
                         rowData.push(siteDetails[dataPoint])
                     }
