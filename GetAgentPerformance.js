@@ -61,7 +61,7 @@
                 callback(accessVariable.cluster,result,table,doneCallback);
             },
             'error': function(XMLHttpRequest, textStatus, errorThrown){
-                callback(null);
+                --ajaxCallsRemaining
 			}
         });
     }
@@ -106,7 +106,13 @@
 				}
             },
             'error': function(XMLHttpRequest, textStatus, errorThrown){
-                console.log(cluster+" Error")
+                console.log(cluster+" Query Error")
+				--ajaxCallsRemaining
+				console.log(ajaxCallsRemaining+" Call Remain")
+				if (ajaxCallsRemaining==0) {
+					console.log("Execute Callback")
+					donecallback();
+				}
             }
         });
     }

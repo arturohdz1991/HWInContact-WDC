@@ -75,7 +75,7 @@
                 callback(accessVariable.cluster,result,table,doneCallBack);
             },
             'error': function(XMLHttpRequest, textStatus, errorThrown){
-                callback(null);
+				--ajaxCallsRemaining
             }
         });
     }
@@ -112,7 +112,7 @@
                 }
                 console.log(cluster+" Query Success")
 				--ajaxCallsRemaining
-				console.log(ajaxCallsRemaining+" Call Remain")
+				console.log(ajaxCallsRemaining+" Call(s) Remain")
 				if (ajaxCallsRemaining==0) {
 					console.log("Execute Callback")
 					table.appendRows(tableData)
@@ -120,7 +120,13 @@
 				}
             },
             'error': function(XMLHttpRequest, textStatus, errorThrown){
-                console.log(cluster+" Error")
+                console.log(cluster+" Query Failure")
+				--ajaxCallsRemaining
+				console.log(ajaxCallsRemaining+" Call(s) Remain")
+				if (ajaxCallsRemaining==0) {
+					console.log("Execute Callback")
+					doneCallBack();
+				}
             }
         });
     }

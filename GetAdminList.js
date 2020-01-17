@@ -68,13 +68,11 @@
 			'data':requestBody,
 			'timeout': 1*60*1000, //1 min timeout
             'success': function(result,status,statusCode){
-                //document.getElementById("result").innerHTML += "<br>1:" + JSON.stringify(result);
-                //accessToken = result
                 console.log(accessVariable.cluster + " Token:" + status);
                 callback(accessVariable.cluster,result,table,doneCallBack);
             },
             'error': function(XMLHttpRequest, textStatus, errorThrown){
-                //document.getElementById("result").innerHTML += "<br>1:" + JSON.stringify(errorThrown);
+				--ajaxCallsRemaining
                 console.log(accessVariable.cluster + " Token:" + textStatus);
             }
         });
@@ -134,7 +132,13 @@
 				}
             },
             'error': function(XMLHttpRequest, textStatus, errorThrown){
-                console.log(cluster + " Result:" + textStatus);
+				console.log(cluster + " Result:" + textStatus);
+				--ajaxCallsRemaining
+				console.log(ajaxCallsRemaining+" Call Remain")
+				if (ajaxCallsRemaining==0) {
+					console.log("Execute Callback")
+					doneCallBack();
+				}
             }
         });
     }
