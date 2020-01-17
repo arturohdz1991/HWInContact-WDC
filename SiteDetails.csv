@@ -36,7 +36,7 @@ AE07,Buenos Aires,,Argentina,CANLA
 AE08,Buenos Aires,,Argentina,CANLA
 AE09,Buenos Aires,,Argentina,CANLA
 AE10,Norfolk,Virginia,United States of America,US
-AE11,"Puerto Galvan, Bahia Blanca",,Argentina,CANLA
+AE11,Bahia Blanca,,Argentina,CANLA
 AE12,Choele Choel,,Argentina,CANLA
 AE13,Capitan Bermudez,,Argentina,CANLA
 AE14,Loma La Lata,,Argentina,CANLA
@@ -44,9 +44,8 @@ AE15,Campana,,Argentina,CANLA
 AE16,Burzaco,,Argentina,CANLA
 AE17,La Rioja,,Argentina,CANLA
 AE18,Valentin Alsina,,Argentina,CANLA
-AE19,"Cachoeirinha, Porto Alegre",,Brazil,CANLA
+AE19,Cachoeirinha,,Brazil,CANLA
 AE20,Buenos Aires,,Argentina,CANLA
-AF01,"US Military Base, Afghanistan",,Afghanistan,EMEA
 AK02,Anchorage,Alaska,United States of America,US
 AK03,Fairbanks,Alaska,United States of America,US
 AK04,Anchorage,Alaska,United States of America,US
@@ -373,7 +372,7 @@ BR0B,Triunfo,null,Brazil,CANLA
 BR0C,Gaviao Peixoto,null,Brazil,CANLA
 BR0D,Rio de Janeiro,,Brazil,CANLA
 BR0E,Montes Claros,,Brazil,CANLA
-BR0F,"Cachoeirinha, Porto Alegre",,Brazil,CANLA
+BR0F,Cachoeirinha,,Brazil,CANLA
 BR0G,Sao Paulo,null,Brazil,CANLA
 BR0H,Sao Paulo,null,Brazil,CANLA
 BR0I,Barueri,,Brazil,CANLA
@@ -576,7 +575,7 @@ CH1M,Shenzhen,,China,APAC
 CH1N,Nanjing,,China,APAC
 CH1O,Tianjin,,China,APAC
 CH1P,Tianjin,,China,APAC
-CH1Q,Xi'an,,China,APAC
+CH1Q,Xian,,China,APAC
 CH1R,Macau,China,China,APAC
 CH1S,Shanghai,,China,APAC
 CH1T,Beijing,,China,APAC
@@ -585,7 +584,7 @@ CH1V,Shanghai,,China,APAC
 CH1W,Shanghai,,China,APAC
 CH1X,Beijing,,China,APAC
 CH1Y,Shenzhen,,China,APAC
-CH1Z,Xi'an,,China,APAC
+CH1Z,Xian,,China,APAC
 CH23,Suzhou,,China,APAC
 CH28,Xiamen,,China,APAC
 CH29,Shanghai,,China,APAC
@@ -625,7 +624,7 @@ CH3F,Pune,,India,APAC
 CH3G,Hainan,Hainan,China,APAC
 CH3H,Guizhou,,China,APAC
 CH3I,Zhongshan,,China,APAC
-CH3J,Xi'an,,China,APAC
+CH3J,Xian,,China,APAC
 CH3K,Tianjin,,China,APAC
 CH3L,Beijing,,China,APAC
 CH3M,Nanjing,,China,APAC
@@ -638,7 +637,7 @@ CH3S,Suzhou,,China,APAC
 CH3T,Suzhou,,China,APAC
 CH3U,Suzhou,,China,APAC
 CH3V,Shenzhen,,China,APAC
-CH3W,Xi'an,,China,APAC
+CH3W,Xian,,China,APAC
 CH3X,Beijing,,China,APAC
 CH3Y,Shanghai,,China,APAC
 CH3Z,Guangzhou,,China,APAC
@@ -685,7 +684,7 @@ CH5L,Luoyang,,China,APAC
 CH5M,Beijing,,China,APAC
 CH5N,Wuhan,,China,APAC
 CH5O,Beijing,,China,APAC
-CH5P,Xi'an,,China,APAC
+CH5P,Xian,,China,APAC
 CH5Q,Shenzhen,,China,APAC
 CH5R,Changsha,,China,APAC
 CH5S,Beijing,,China,APAC
@@ -759,7 +758,7 @@ CH8C,Nanjing,,China,APAC
 CH8D,Shanghai,,China,APAC
 CH8E,Suzhou,,China,APAC
 CH8F,Yingtan,,China,APAC
-CH8G,Xi'an,,China,APAC
+CH8G,Xian,,China,APAC
 CH8H,Shanghai,,China,APAC
 CH8I,Jiaxing,,China,APAC
 CH8J,Wenzhou,,China,APAC
@@ -778,7 +777,7 @@ CH8W,Dalian,,China,APAC
 CH8X,SHENZHEN,,China,APAC
 CH8Y,Guangzhou,,China,APAC
 CH8Z,Zhongshan,,China,APAC
-CH92,Xi'an,,China,APAC
+CH92,Xian,,China,APAC
 CH93,Shenzhen,,China,APAC
 CH97,Tianjin,,China,APAC
 CH98,Shenzhen,,China,APAC
@@ -791,7 +790,7 @@ CH9F,Chongqing,,China,APAC
 CH9G,Shanghai,,China,APAC
 CH9H,Beijing,,China,APAC
 CH9I,Shanghai,,China,APAC
-CH9J,Xi'an,,China,APAC
+CH9J,Xian,,China,APAC
 CH9K,Shenzhen,,China,APAC
 CH9L,Shanghai,,China,APAC
 CH9M,Shanghai,,China,APAC
@@ -930,7 +929,7 @@ CZ34,Brno,,Czech Republic,EMEA
 CZ35,Brno,,Czech Republic,EMEA
 CZ36,Prague,,Czech Republic,EMEA
 CZ37,Brno,,Czech Republic,EMEA
-CZ38,"Krupka, Nov? Modlany",,Czech Republic,EMEA
+CZ38,Krupka,,Czech Republic,EMEA
 CZ39,Krupka,,Czech Republic,EMEA
 CZ40,Dresden,,Germany,EMEA
 CZ41,Ceske Budejovice,,Czech Republic,EMEA
@@ -991,7 +990,7 @@ DR03,Haina,,Dominican Republic,
 DZ01,Algiers,,Algeria,EMEA
 DZ02,Algiers,,Algeria,EMEA
 DZ03,Skikda,,Algeria,EMEA
-DZ04,"Poirson, El Biar",,Algeria,EMEA
+DZ04,Algiers,,Algeria,EMEA
 DZ05,Algiers,,Algeria,EMEA
 EC01,Esmeraldas,null,Ecuador,CANLA
 EG01,Cairo,,Egypt,EMEA
@@ -1348,7 +1347,7 @@ GA67,Alpharetta,Georgia,United States of America,US
 GA68,Atlanta,Georgia,United States of America,US
 GA69,Atlanta,Georgia,United States of America,US
 GA70,Atlanta,Georgia,United States of America,US
-GA71,"Duluth, GA",Georgia,United States of America,US
+GA71,Duluth,Georgia,United States of America,US
 GA72,Atlanta,Georgia,United States of America,US
 GA73,Atlanta,Georgia,United States of America,US
 GA74,Atlanta,Georgia,United States of America,US
@@ -1636,7 +1635,7 @@ HU04,Budapest,,Hungary,EMEA
 HU05,Budapest,,Hungary,EMEA
 HU06,Budapest,,Hungary,EMEA
 HU07,Nagykanizsa,,Hungary,EMEA
-HU08,"Nagykanizsa, Sormas",,Hungary,EMEA
+HU08,Nagykanizsa,,Hungary,EMEA
 HU09,Százhalombatta,,Hungary,EMEA
 HU10,Budapest,,Hungary,EMEA
 HU11,Budapest,,Hungary,EMEA
@@ -1645,7 +1644,7 @@ HU13,Budapest,,Hungary,EMEA
 HU14,Nagykanizsa,null,Hungary,EMEA
 HU15,Nagykanizsa,null,Hungary,EMEA
 HU16,Budapest,null,Hungary,EMEA
-HU17,"Nagykanizsa, Sormas",null,Hungary,EMEA
+HU17,Nagykanizsa,null,Hungary,EMEA
 IA10,Urbandale,Iowa,United States of America,US
 IA11,Davenport,Iowa,United States of America,US
 IA12,Adidson,Illinois,United States of America,US
@@ -1676,7 +1675,7 @@ IB43,Jakarta,,Indonesia,APAC
 IB44,Jakarta,,Indonesia,APAC
 IB45,Jakarta,,Indonesia,APAC
 IB46,Jakarta Timur,,Indonesia,APAC
-IB47,"Pondok Ungu,Bekasi-Jawa Barat",null,Indonesia,APAC
+IB47,Bekasi,null,Indonesia,APAC
 IB48,Jakarta,null,Indonesia,APAC
 IB49,Jakarta,null,Indonesia,APAC
 IC01,Ireland,,Iceland,EMEA
@@ -2055,7 +2054,7 @@ IT0Z,Segrate,,Italy,EMEA
 IT13,Milan,,Italy,EMEA
 IT14,Bologna,,Italy,EMEA
 IT17,Napoli,,Italy,EMEA
-IT1A,"Rome, RM",,Italy,EMEA
+IT1A,Rome,,Italy,EMEA
 IT1B,Limena,,Italy,EMEA
 IT1C,Arluno,,Italy,EMEA
 IT1D,Arluno,,Italy,EMEA
@@ -2212,7 +2211,7 @@ KS75,Wichita,Kansas,United States of America,US
 KS76,Wichita,Kansas,United States of America,US
 KS77,Olathe,Kansas,United States of America,US
 KS78,Lawrence,Kansas,United States of America,US
-KS79,"Ft. Riley, KS",Kansas,United States of America,US
+KS79,Fort Riley,Kansas,United States of America,US
 KS80,Overland Park,Kansas,United States of America,US
 KS81,Lenexa,Kansas,United States of America,US
 KU02,Camp Arifjan,,Kuwait,EMEA
@@ -2487,7 +2486,7 @@ MX1A,Ciudad del Carmen,,Mexico,CANLA
 MX1B,San Luis Potosi,,Mexico,CANLA
 MX1C,Mexico City,,Mexico,CANLA
 MX1D,Mexico City,,Mexico,CANLA
-MX1E,"Zapopan, Jalisco",null,Mexico,CANLA
+MX1E,Zapopan,null,Mexico,CANLA
 MX1F,Monterrey,,Mexico,CANLA
 MX1G,Mexicali,,Mexico,CANLA
 MX1H,Mexicali,,Mexico,CANLA
@@ -3561,7 +3560,7 @@ SP78,Seville,,Spain,EMEA
 SP79,Seville,,Spain,EMEA
 SP80,Barcelona,,Spain,EMEA
 SP81,Madrid,,Spain,EMEA
-SP82,"Paterna, Valencia",,Spain,EMEA
+SP82,Valencia,,Spain,EMEA
 SP83,Sevilla,,Spain,EMEA
 SP84,Madrid,null,Spain,EMEA
 SP85,Madrid,null,Spain,EMEA
@@ -3576,7 +3575,7 @@ SP93,Bilbao,null,Spain,EMEA
 SP94,Madrid,null,Spain,EMEA
 SP95,Sevilla,null,Spain,EMEA
 SP96,Barcelona,null,Spain,EMEA
-SP97,"Paterna, Valencia",null,Spain,EMEA
+SP97,Valencia,null,Spain,EMEA
 SP98,Madrid,null,Spain,EMEA
 SQ01,Regina,Saskatchewan,Canada,CANLA
 SQ02,Saskatoon,Saskatchewan,Canada,CANLA
@@ -3728,7 +3727,7 @@ TC42,Fujairah,,United Arab Emirates,EMEA
 TC43,Dubai,,United Arab Emirates,EMEA
 TC44,Dubai,,United Arab Emirates,EMEA
 TC45,Dubai,,United Arab Emirates,EMEA
-TC46,"Masdar City, Abu Dhabi",,United Arab Emirates,EMEA
+TC46,Abu Dhabi,,United Arab Emirates,EMEA
 TC47,Abu Dhabi,,United Arab Emirates,EMEA
 TC48,Dubai,,United Arab Emirates,EMEA
 TC49,Ras Al-Khaimah,,United Arab Emirates,EMEA
@@ -3895,7 +3894,7 @@ TX2C,Austin,Texas,United States of America,US
 TX2D,Richardson,Texas,United States of America,US
 TX2E,El Paso,Texas,United States of America,US
 TX2F,Austin,Texas,United States of America,US
-TX2G,"El Paso, TX 79907",Texas,United States of America,US
+TX2G,El Paso,Texas,United States of America,US
 TX2H,Houston,Texas,United States of America,US
 TX2I,Cleona,Pennsylvania,United States of America,US
 TX2J,Pharr,Texas,United States of America,US
@@ -4167,7 +4166,7 @@ UK79,Scunthorpe,,United Kingdom,EMEA
 UK7A,Whitstable,,United Kingdom,EMEA
 UK7B,London,,United Kingdom,EMEA
 UK7C,UK,,United Kingdom,EMEA
-UK7D,"Glenrothes, Fife",,United Kingdom,EMEA
+UK7D,Glenrothes,,United Kingdom,EMEA
 UK7E,Cheadle,,United Kingdom,EMEA
 UK7F,Heathrow,,United Kingdom,EMEA
 UK7G,Enfield,,United Kingdom,EMEA
@@ -4193,7 +4192,7 @@ UK8A,Worthing,,United Kingdom,EMEA
 UK8B,Herts,,United Kingdom,EMEA
 UK8C,Didcot,,United Kingdom,EMEA
 UK8D,Oxford,,United Kingdom,EMEA
-UK8E,"Cannock, Staffordshire",,United Kingdom,EMEA
+UK8E,Cannock,,United Kingdom,EMEA
 UK8F,Stocksbridge,,United Kingdom,EMEA
 UK8G,Stocksbridge,,United Kingdom,EMEA
 UK8H,Redcar,,United Kingdom,EMEA
@@ -4218,7 +4217,7 @@ UK99,Motherwell,,United Kingdom,EMEA
 UK9A,Tewkesbury,,United Kingdom,EMEA
 UK9B,Prenton (Wirrall),,United Kingdom,EMEA
 UK9C,Prenton (Wirrall),,United Kingdom,EMEA
-UK9D,"Prenton, Wirral",,United Kingdom,EMEA
+UK9D,Birkenhead,,United Kingdom,EMEA
 UK9E,London,null,United Kingdom,EMEA
 UK9F,Milton Keynes,null,United Kingdom,EMEA
 UK9G,Motherwell,null,United Kingdom,EMEA
@@ -4252,7 +4251,7 @@ UKA8,Enfield,null,United Kingdom,EMEA
 UKA9,Basildon,null,United Kingdom,EMEA
 UKAA,Winnersh,null,United Kingdom,EMEA
 UKAB,Reading,null,United Kingdom,EMEA
-UKAC,"Cawsey Way, Woking",null,United Kingdom,EMEA
+UKAC,Woking,null,United Kingdom,EMEA
 UKAD,Birmingham,null,United Kingdom,EMEA
 UKAG,Motherwell,null,United Kingdom,EMEA
 UKAH,Ellesmere Port,,United Kingdom,EMEA
@@ -4405,8 +4404,8 @@ VE05,Barcelona,,Venezuela,CANLA
 VE08,Punto Fijo,,Venezuela,CANLA
 VE09,Punto Fijo,,Venezuela,CANLA
 VE10,La Victoria,,Venezuela,CANLA
-VE11,"Santa Fe, Punto Fijo",,Venezuela,CANLA
-VI01,"Christiansted, VI",Virgin Islands,United States of America,US
+VE11,Santa Fe,,Venezuela,CANLA
+VI01,Christiansted,Virgin Islands,United States of America,US
 VN01,Ho Chi Minh City,,Viet Nam,APAC
 VN02,Hanoi,,Viet Nam,APAC
 VN03,Hanoi,,Viet Nam,APAC
