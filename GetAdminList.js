@@ -89,8 +89,9 @@
             reportId = 1073741825;
         }
         
-        startDate = new Date().toISOString()
-        endDate = new Date().toISOString()
+		today = new Date()
+		endDate = new Date(today.getFullYear(),today.getMonth(),today.getDate())
+        startDate = new Date(today.getFullYear(),today.getMonth(),today.getDate())
         includeHeaders = false
         requestBody = {
             
@@ -107,7 +108,7 @@
             'data':requestBody,
             'timeout': 5*60*1000, //5 min timeout
             'success': function (result,status,statusCode){
-                console.log(cluster + " Result:" + status);
+                //console.log(cluster + " Result:" + status);
                 csvResult = atob(result.file)
                 //csvResult.replace(/(\r\n|\n|\r)/gm,";")
                 csvRows=csvResult.split(/\n/)
