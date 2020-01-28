@@ -278,7 +278,7 @@
             'success': function (result,status,statusCode){
                 performList = result.agentPerformance
                 for (record in performList){
-					if(performList[record].totalHandled!=0){
+					if(performList[record].totalHandled>0){
 						tableData.push({
 							"Cluster":cluster,
 							"agentId":performList[record].agentId,
