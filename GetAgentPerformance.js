@@ -88,13 +88,13 @@
             'success': function (result,status,statusCode){
                 performList = result.agentPerformance
                 for (record in performList){
-                    rowData = []
-                    rowData.push(cluster)
-                    agentDetails = performList[record]
-                    for (dataPoint in agentDetails){
-                        rowData.push(agentDetails[dataPoint])
-                    }
-                    tableData.push(rowData)
+                    if(performList[record].totalHandled>0){
+						tableData.push({
+							"Cluster":cluster,
+							"agentId":performList[record].agentId,
+							"totalHandled":performList[record].totalHandled
+						})
+					}
                 }
 				console.log(cluster+" Query Success")
 				--ajaxCallsRemaining
