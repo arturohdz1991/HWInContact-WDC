@@ -267,7 +267,7 @@
 			'fields': 'agentId,totalHandled'
 		}
         $.ajax({
-            'url':accessToken.resource_server_base_uri + "services/v16.0/agents/performance",
+            'url':accessToken.resource_server_base_uri + "services/v17.0/agents/performance",
             'type':'GET',
             'headers':{
                 'Authorization':'bearer '+ accessToken.access_token,
@@ -278,11 +278,13 @@
             'success': function (result,status,statusCode){
                 performList = result.agentPerformance
                 for (record in performList){
-					tableData.push({
-						"Cluster":cluster,
-						"agentId":performList[record].agentId,
-						"totalHandled":performList[record].totalHandled
-					})
+					if(performList[record].totalHandled!=0){
+						tableData.push({
+							"Cluster":cluster,
+							"agentId":performList[record].agentId,
+							"totalHandled":performList[record].totalHandled
+						})
+					}
                 }
 				console.log(cluster+" Query Success")
 				--ajaxCallsRemaining
