@@ -156,13 +156,24 @@
             'success': function (result,status,statusCode){
                 agentList = result.agents
                 for (record in agentList){
-                    rowData = []
-                    rowData.push(cluster)
-                    agentDetails = agentList[record]
-                    for (dataPoint in agentDetails){
-                        rowData.push(agentDetails[dataPoint])
-                    }
-                    tableData.push(rowData)
+					tableData.push({
+						"Cluster":cluster,
+						"agentId":agentList[record].agentId,
+						"firstName":agentList[record].firstName,
+						"lastName":agentList[record].lastName,
+						"emailAddress":agentList[record].emailAddress,
+						"isActive":agentList[record].isActive,
+						"teamId":agentList[record].teamId,
+						"teamName":agentList[record].teamName,
+						"reportToId":agentList[record].reportToId,
+						"location":agentList[record].location,
+						"internalId":agentList[record].internalId,
+						"profileId":agentList[record].profileId,
+						"profileName":agentList[record].profileName,
+						"createDate":agentList[record].createDate,
+						"inactiveDate":agentList[record].inactiveDate,
+						"isBillable":agentList[record].isBillable
+					})
                 }
                 console.log(cluster+" Query Success")
 				--ajaxCallsRemaining
