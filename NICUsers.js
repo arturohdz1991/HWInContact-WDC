@@ -128,7 +128,7 @@
             },
             'error': function(XMLHttpRequest, textStatus, errorThrown){
 				--ajaxCallsRemaining
-                console.log(cluster+" Error")
+                console.log(cluster+" Error: "+textStatus)
             }
         });
     }
@@ -185,7 +185,7 @@
             },
             'error': function(XMLHttpRequest, textStatus, errorThrown){
 				--ajaxCallsRemaining
-                console.log(cluster+" Error")
+                console.log(cluster+" Error: "+textStatus)
             }
         });
     }
