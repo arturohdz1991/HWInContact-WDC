@@ -58,7 +58,6 @@
 		var AgentPerfCols = [
             {id: "Cluster",dataType: tableau.dataTypeEnum.string},
             {id: "agentId",alias:"User ID",dataType: tableau.dataTypeEnum.int},
-            {id: "teamId",dataType: tableau.dataTypeEnum.int},
             {id: "totalHandled",dataType: tableau.dataTypeEnum.int}
         ];
         var AgentPerfSchema = {
@@ -185,6 +184,7 @@
 				}
             },
             'error': function(XMLHttpRequest, textStatus, errorThrown){
+				--ajaxCallsRemaining
                 console.log(cluster+" Error")
             }
         });
@@ -278,13 +278,11 @@
             'success': function (result,status,statusCode){
                 performList = result.agentPerformance
                 for (record in performList){
-                    rowData = []
-                    rowData.push(cluster)
-                    agentDetails = performList[record]
-                    for (dataPoint in agentDetails){
-                        rowData.push(agentDetails[dataPoint])
-                    }
-                    tableData.push(rowData)
+					tableData.push({
+						"Cluster":cluster,
+						"agentId":performList[record].agentId,
+						"totalHandled":performList[record].totalHandled
+					})
                 }
 				console.log(cluster+" Query Success")
 				--ajaxCallsRemaining
