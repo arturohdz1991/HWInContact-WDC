@@ -77,7 +77,7 @@
 			'fields': 'agentId,totalHandled'
 		}
         $.ajax({
-            'url':accessToken.resource_server_base_uri + "services/v16.0/agents/performance",
+            'url':accessToken.resource_server_base_uri + "services/v17.0/agents/performance",
             'type':'GET',
             'headers':{
                 'Authorization':'bearer '+ accessToken.access_token,
