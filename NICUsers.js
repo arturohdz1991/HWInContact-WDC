@@ -332,7 +332,7 @@
     myConnector.getData = function(table, doneCallback) {
 		console.log(table.tableInfo.id)
 		if(table.tableInfo.id=="agentList"||table.tableInfo.id=="adminList"||table.tableInfo.id=="agentPerformance"){getAccessData(table,doneCallback)}
-		if(table.tableInfo.id == "siteDetails"){dataRequestSiteDetails(table,doneCallBack);}
+		if(table.tableInfo.id == "siteDetails"){dataRequestSiteDetails(table,doneCallback);}
     };
 
     tableau.registerConnector(myConnector);
