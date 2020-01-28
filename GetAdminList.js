@@ -98,8 +98,8 @@
         }
         $.ajax({
             'url':
-            accessToken.resource_server_base_uri + "services/v16.0/report-jobs/datadownload/" + reportId +
-            '?startDate=' + startDate + '&endDate=' + endDate + '&includeHeaders=' + includeHeaders,
+            accessToken.resource_server_base_uri + "services/v17.0/report-jobs/datadownload/" + reportId +
+            '?startDate=' + startDate.toISOString() + '&endDate=' + endDate.toISOString() + '&includeHeaders=' + includeHeaders,
             'type':'POST',
             'headers':{
                 'Authorization':'bearer '+ accessToken.access_token,
