@@ -79,23 +79,16 @@
     }
     //Function to request data
     function dataRequest(cluster, accessToken,table,doneCallBack){
-        if (cluster == "HON"|cluster == "PMT"){
-            reportId = 1073742382;
-        } else if(cluster == "HBT"|cluster == "SPS"){
-            reportId = 1074092264;
-        } else if(cluster == "AERO"|cluster == "SPSEM"){
-            reportId = 1073741832;
-        } else if(cluster == "HRCC"|cluster == "DSES"){
-            reportId = 1073741825;
-        }
+		if (cluster == "HON"|cluster == "PMT"){reportId = 1073742382;}
+		else if(cluster == "HBT"|cluster == "SPS"){reportId = 1074092264;}
+		else if(cluster == "AERO"|cluster == "SPSEM"){reportId = 1073741832;}
+		else if(cluster == "HRCC"|cluster == "DSES"){reportId = 1073741825;}
         
 		today = new Date()
 		endDate = new Date(today.getFullYear(),today.getMonth(),today.getDate())
         startDate = new Date(today.getFullYear(),today.getMonth(),today.getDate())
         includeHeaders = false
-        requestBody = {
-            
-        }
+
         $.ajax({
             'url':
             accessToken.resource_server_base_uri + "services/v16.0/report-jobs/datadownload/" + reportId +
@@ -108,17 +101,12 @@
             'data':requestBody,
             'timeout': 5*60*1000, //5 min timeout
             'success': function (result,status,statusCode){
-                //console.log(cluster + " Result:" + status);
                 csvResult = atob(result.file)
-                //csvResult.replace(/(\r\n|\n|\r)/gm,";")
                 csvRows=csvResult.split(/\n/)
-                //for (csvRow=0;csvRow<1;csvRow++){
-                for (csvRow=0;csvRow<csvRows.length;csvRow++){
-                    //console.log(csvRows[csvRow])
+                for (csvRow in csvRows){
                     rowData = []
                     agentDetails = csvRows[csvRow].split(',')
-                    for (dataPoint=0;dataPoint<agentDetails.length;dataPoint++){
-                        //console.log(agentDetails[dataPoint])
+                    for (dataPoint in agentDetails){
                         rowData.push(agentDetails[dataPoint])
                     }
 					tableData.push(rowData)

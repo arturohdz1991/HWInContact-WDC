@@ -30,7 +30,6 @@
         var cols = [
             {id: "Cluster",dataType: tableau.dataTypeEnum.string},
             {id: "agentId",alias:"User ID",dataType: tableau.dataTypeEnum.int},
-            {id: "teamId",dataType: tableau.dataTypeEnum.int},
             {id: "totalHandled",dataType: tableau.dataTypeEnum.int}
         ];
         var tableSchema = {
@@ -98,7 +97,7 @@
                 }
 				console.log(cluster+" Query Success")
 				--ajaxCallsRemaining
-				console.log(ajaxCallsRemaining+" Call Remain")
+				console.log(ajaxCallsRemaining+" Call(s) Remain")
 				if (ajaxCallsRemaining==0) {
 					console.log("Execute Callback")
 					table.appendRows(tableData)
@@ -108,7 +107,7 @@
             'error': function(XMLHttpRequest, textStatus, errorThrown){
                 console.log(cluster+" Query Error")
 				--ajaxCallsRemaining
-				console.log(ajaxCallsRemaining+" Call Remain")
+				console.log(ajaxCallsRemaining+" Call(s) Remain")
 				if (ajaxCallsRemaining==0) {
 					console.log("Execute Callback")
 					donecallback();

@@ -45,13 +45,11 @@
             {id: "inactiveDate",alias:"User Inactive Date",dataType: tableau.dataTypeEnum.datetime},
             {id: "isBillable",dataType: tableau.dataTypeEnum.bool}
         ];
-
         var tableSchema = {
             id: "agentList",
             alias: "User Lists",
             columns: cols
         };
-
         schemaCallback([tableSchema]);
     };
     //Function to request Access token
