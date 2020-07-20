@@ -44,7 +44,7 @@
 			{id: "countryName",alias:"Country",dataType: tableau.dataTypeEnum.string},
 			{id: "location",alias:"NIC Site",dataType: tableau.dataTypeEnum.string},
 			{id: "state",alias:"State/Province",dataType: tableau.dataTypeEnum.string},
-            {id: "city",alias:"City",dataType: tableau.dataTypeEnum.datetime},
+            {id: "city",alias:"City",dataType: tableau.dataTypeEnum.string,
             {id: "inactiveDate",alias:"User Inactive Date",dataType: tableau.dataTypeEnum.datetime},
             {id: "isBillable",dataType: tableau.dataTypeEnum.bool}
         ];
