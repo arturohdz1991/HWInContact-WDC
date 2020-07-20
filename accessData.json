@@ -40,11 +40,5 @@
     "email": "API_READONLY@HRCC.com",
     "password": "aP1_2020",
     "applicationID": "Admin@HRCC.com:4599199"
-  },
-  "7": {
-    "cluster": "DSES",
-    "email": "Arturo.Hernandez2@DSES.com",
-    "password": "Nov12345!",
-    "applicationID": "Admin@DSES.com:4599200"
   }
 }
