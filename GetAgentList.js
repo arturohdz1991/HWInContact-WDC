@@ -41,11 +41,8 @@
             {id: "internalId",alias:"NIC EID",dataType: tableau.dataTypeEnum.string},
             {id: "profileId",dataType: tableau.dataTypeEnum.int},
 			{id: "profileName",dataType: tableau.dataTypeEnum.string},
-			{id: "countryName",alias:"Country",dataType: tableau.dataTypeEnum.string},
 			{id: "location",alias:"NIC Site",dataType: tableau.dataTypeEnum.string},
-			{id: "state",alias:"State/Province",dataType: tableau.dataTypeEnum.string},
-            {id: "city",alias:"City",dataType: tableau.dataTypeEnum.string},
-            {id: "inactiveDate",alias:"User Inactive Date",dataType: tableau.dataTypeEnum.datetime},
+			{id: "inactiveDate",alias:"User Inactive Date",dataType: tableau.dataTypeEnum.datetime},
             {id: "isBillable",dataType: tableau.dataTypeEnum.bool}
         ];
         var tableSchema = {
@@ -86,7 +83,7 @@
             'updatedSince': '',
             'isActive': '',
             'searchString': '',
-            'fields': 'agentId,firstName,lastName,emailAddress,isActive,teamId,teamName,reportToId,location,city,countryName,state,profileId,profileName,createDate,inactiveDate,internalId,isBillable',
+            'fields': 'agentId,firstName,lastName,emailAddress,isActive,teamId,teamName,reportToId,location,profileId,profileName,createDate,inactiveDate,internalId,isBillable',
             'skip': '',
             'top': '',
             'orderBy': ''
