@@ -1,44 +1,44 @@
 {
 	"0": {
 	  "cluster": "HON",
-	  "email": "API_READONLY@HON.com",
-	  "password": "aP1_2020",
+	  "email": "Arturo.Hernandez2@Hon.com",
+	  "password": "Aug74185!",
 	  "applicationID": "Admin@HON.com:4597891"
 	},
 	"1": {
 	  "cluster": "PMT",
-	  "email": "Kowsalya.Natarajan@pmt.com",
-	  "password": "Nttd@t@127",
+	  "email": "Arturo.Hernandez2@PMT.com",
+	  "password": "Aug74185!",
 	  "applicationID": "Alteryx@PMT.com:4597432"
 	},
 	"2": {
 	  "cluster": "HBT",
-	  "email": "API_READONLY@HBT.com",
-	  "password": "aP1_2020",
+	  "email": "Arturo.Hernandez2@HBT.com",
+	  "password": "Mar12345!",
 	  "applicationID": "Alteryx@HBT.com:4597435"
 	},
 	"3": {
 	  "cluster": "SPS",
-	  "email": "API_READONLY@SPS.com",
-	  "password": "aP1_2020",
+	  "email": "Arturo.Hernandez2@SPS.com",
+	  "password": "Aug74185!",
 	  "applicationID": "Alteryx@SPS.com:4597431"
 	},
 	"4": {
 	  "cluster": "AERO",
-	  "email": "API_READONLY@AERO.com",
-	  "password": "aP1_2020",
+	  "email": "Arturo.Hernandez2@AERO.com",
+	  "password": "Jan74185!",
 	  "applicationID": "Admin@AERO.com:4597433"
 	},
 	"5": {
 	  "cluster": "SPSEM",
-	  "email": "API_READONLY@SPSEM.com",
-	  "password": "aP1_2020",
+	  "email": "Arturo.Hernandez2@SPSEM.com",
+	  "password": "Sept74185!",
 	  "applicationID": "Alteryx@EM.com:4597927"
 	},
 	"6": {
 	  "cluster": "HRCC",
-	  "email": "API_READONLY@HRCC.com",
-	  "password": "aP1_2020",
+	  "email": "Arturo.Hernandez2@HRCC.com",
+	  "password": "Aug74185!",
 	  "applicationID": "Admin@HRCC.com:4599199"
 	}
   }
