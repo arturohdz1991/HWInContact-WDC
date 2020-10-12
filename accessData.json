@@ -40,5 +40,11 @@
 	  "email": "Arturo.Hernandez2@HRCC.com",
 	  "password": "Aug74185!",
 	  "applicationID": "Admin@HRCC.com:4599199"
-	}
+	},
+	"7": {
+		"cluster": "DSES",
+		"email": "Arturo.Hernandez2@DSES.com",
+		"password": "Sept78945!",
+		"applicationID": "Admin@DSES.com:4599200"
+	  }
   }
