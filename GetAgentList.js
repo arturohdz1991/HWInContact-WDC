@@ -87,7 +87,7 @@
             'updatedSince': '',
             'isActive': '',
             'searchString': '',
-            'fields': 'agentId,firstName,lastName,emailAddress,isActive,teamId,teamName,reportToId,location,city,country,countryName,state,internalId,profileId,profileName,createDate,inactiveDate,isBillable,',
+            'fields': 'agentId,firstName,lastName,emailAddress,isActive,teamId,teamName,reportToId,location,city,country,countryName,state,internalId,profileId,profileName,createDate,inactiveDate,isBillable',
             'skip': '',
             'top': '',
             'orderBy': ''
