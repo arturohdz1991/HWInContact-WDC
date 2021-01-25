@@ -93,7 +93,7 @@
             'orderBy': ''
         }
         $.ajax({
-            'url':accessToken.resource_server_base_uri + "services/v20.0/agents",
+            'url':accessToken.resource_server_base_uri + "services/v17.0/agents",
             'type':'GET',
             'headers':{
                 'Authorization':'bearer '+ accessToken.access_token,
