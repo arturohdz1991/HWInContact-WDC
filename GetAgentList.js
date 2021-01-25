@@ -41,6 +41,10 @@
             {id: "internalId",alias:"NIC EID",dataType: tableau.dataTypeEnum.string},
             {id: "profileId",dataType: tableau.dataTypeEnum.int},
 			{id: "profileName",dataType: tableau.dataTypeEnum.string},
+			{id: "country",alias:"NIC Country Short",dataType: tableau.dataTypeEnum.string},
+			{id: "countryName",alias:"NIC Country",dataType: tableau.dataTypeEnum.string},
+			{id: "state",alias:"NIC State",dataType: tableau.dataTypeEnum.string},
+			{id: "city",alias:"NIC City",dataType: tableau.dataTypeEnum.string},
 			{id: "createDate",alias:"User Inactive Date",dataType: tableau.dataTypeEnum.datetime},
 			{id: "inactiveDate",alias:"User Inactive Date",dataType: tableau.dataTypeEnum.datetime},
             {id: "isBillable",dataType: tableau.dataTypeEnum.bool}
@@ -83,13 +87,13 @@
             'updatedSince': '',
             'isActive': '',
             'searchString': '',
-            'fields': 'agentId,firstName,lastName,emailAddress,isActive,teamId,teamName,reportToId,location,internalId,profileId,profileName,createDate,inactiveDate,isBillable',
+            'fields': 'agentId,firstName,lastName,emailAddress,isActive,teamId,teamName,reportToId,location,city,country,countryName,state,internalId,profileId,profileName,createDate,inactiveDate,isBillable,',
             'skip': '',
             'top': '',
             'orderBy': ''
         }
         $.ajax({
-            'url':accessToken.resource_server_base_uri + "services/v17.0/agents",
+            'url':accessToken.resource_server_base_uri + "services/v20.0/agents",
             'type':'GET',
             'headers':{
                 'Authorization':'bearer '+ accessToken.access_token,
@@ -114,6 +118,10 @@
 						"internalId":agentList[record].internalId,
 						"profileId":agentList[record].profileId,
 						"profileName":agentList[record].profileName,
+						"country":agentList[record].country,
+						"countryName":agentList[record].countryName,
+						"state":agentList[record].state,
+						"city":agentList[record].city,
 						"createDate":agentList[record].createDate,
 						"inactiveDate":agentList[record].inactiveDate,
 						"isBillable":agentList[record].isBillable
